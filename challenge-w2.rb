@@ -19,8 +19,8 @@ end
 # print "Did you have any voucer for 10% discount? (yes/no): "
 # answer = gets.chomp
 # if answer == 'yes'
-#     in_total.sum = in_total.sum * 0.9
-#     puts in_total.sum.to_f
+#   in_total.sum = in_total.sum * 0.9
+#   puts in_total.sum.to_f
 # elsif answer == 'no'
 #   puts in_total.sum
 # end
@@ -32,11 +32,12 @@ payment = gets.chomp.to_f
 balance = payment - in_total.sum
 
 while payment < in_total.sum
-  if payment >= in_total.sum
-    puts "The balace of money is: #{balance}"
-    puts "Thanks for coming."
-  else
-    print "Insufficient payment: "
-    payment = gets.chomp.to_f
-  end
+  print "Insufficient payment: "
+  payment = gets.chomp.to_f
 end
+
+if payment > in_total.sum
+  puts "The balace of money is: #{balance}"
+  puts "Thanks for coming."
+end
+#end
